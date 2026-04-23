@@ -9,4 +9,5 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     Page numbers are 1-indexed, so page 1 starts at index 0.
     """
     start = (page - 1) * page_size
-    return (start, start + page_size)
+    end = start + page_size
+    return (start, end)
